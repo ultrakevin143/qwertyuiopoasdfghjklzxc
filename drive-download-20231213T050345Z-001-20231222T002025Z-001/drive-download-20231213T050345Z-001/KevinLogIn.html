@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Locked</title>
+    <script src="lock.js"></script>
+</head>
+<body>
+    <style>
+*{
+            margin: 0%;
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 300vh;
+            background-image: url(https://static.wikia.nocookie.net/powerlisting/images/4/43/Gear_5_turns_Ground_into_Rubber.gif/revision/latest/scale-to-width-down/516?cb=20230825031207);
+            background-repeat: no-repeat;
+            width: 100%;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        body{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .wrapper
+        {
+            width: 100px;
+            height: 60;
+            border: 50;
+            outline: 20;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            min-width: 450px;
+            background-image: url(https://i.pinimg.com/originals/0c/96/49/0c9649f0a491373305b741c3be3d35cc.gif);
+            color: rgb(0, 0, 0);
+            border-radius: 80px;
+            padding: 70px;
+            text-align: center;
+            justify-content: center;
+            margin-right: 10px;
+        font-size: larger;
+        font-weight: 300;
+        }
+        .wrapper{
+            justify-content: center;
+        }
+
+
+        </style>
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var inputField = document.getElementById('inputField');
+  var form = document.getElementById('myForm');
+
+  inputField.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+          e.preventDefault();
+          submitForm();
+      }
+  });
+  form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitForm();
+  });
+  function submitForm() {
+      var userInput = document.getElementById("inputField").value;
+      if (userInput.trim() !== "") {
+        if (userInput === '54321') {
+          alert('Correct input! Redirecting...');
+          window.location.href = "Untitled-5.html";
+        } 
+        else {
+          alert('Incorrect input.');
+        }
+      }
+      else {
+        alert("Input Required")
+      }
+  }
+});
+            </script>
+            <div class="wrapper"></div>
+<div class="container"><p>Enter Passcode</p>↓
+    <div class="top">
+        <div class="center">
+        <div class="align-items">
+        <i class="fa-solid fa-triangle-exclamation warning">
+        
+    </div>
+    </div>
+    
+    <div class="white-space" class="center">
+        <form id="myForm" method="post">
+            <textarea id="inputField" name="inputField"></textarea>
+        </form>
+    </div>
+    <div class="bars">
+        <button type="submit" form="myForm" onclick="submitForm()">Submit</button>
+    </div>
+</div>
+</body>
+</html>
